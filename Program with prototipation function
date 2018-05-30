@@ -1,0 +1,39 @@
+#include<iostream>
+#include "funzioni.h"
+using namespace std;
+int intestazione();
+void carica_array(int vett[]);
+void stampa_array(int vett[]);
+int main()
+{
+	int vett[21];//dichiarazione del vettore
+	intestazione();
+	carica_array(vett);
+	stampa_array(vett);
+}
+int intestazione()//firma o signatura della funzione intestazione la dichiariamo di tipo void perch� non restituisce risultato
+{
+	cout << "                     *****************************************\n";
+	cout << "                     **              Benvenuto              **\n";
+	cout << "                      **              Giuseppe             ** \n";
+	cout << "                       **       Programmato da Peppe...   **  \n";
+	cout << "                        ***********************************   \n";
+}
+void carica_array(int vett[])//firma o signatura della funzione carica array
+{
+	int n = 0;
+	for (int i = 0; i < 21; i++)
+	{
+		cout << "Inserire un numero \n";
+		cin >> vett[i];
+	}
+}
+void stampa_array(int vett[])//firma o signatura della funzione che stampa l'array a video
+{
+	carica_array(vett);
+	for (int i = 0; i < 21; i++)
+	{
+		cout << "Il numero " << i + 1 << " e' " << vett[i] << "\n";
+	}
+}
+
